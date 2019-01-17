@@ -6,6 +6,10 @@ compiler:
   - clang
   - gcc
 
+install:
+ - pip3 install meson
+ - apt-get install ninja-build
+
 script:
  - meson build --buildtype releas
  - ninja -C build
