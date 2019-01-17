@@ -3,7 +3,7 @@ dist: xenial
 
 language: python
 
-python: 3.6
+python: 3.7
 
 matrix:
   include:
@@ -24,11 +24,11 @@ install:
 jobs:
   include:
    - stage: build
-     script
+     script:
       - meson build --buildtype release
       - ninja -C build
    - stage: test
-     script
+     script:
       - meson configure -Dbuild_tests=true
       - meson test -v
       - ninja -C build test
