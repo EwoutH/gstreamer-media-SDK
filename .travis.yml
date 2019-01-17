@@ -8,8 +8,8 @@ compiler:
   - gcc
 
 install:
- - apt-get install meson
- - apt-get install ninja-build
+ - pip install --user meson
+ - pip install --user ninja-build
 
 script:
  - meson build --buildtype releas
